@@ -10,7 +10,7 @@ partTwo :: [Int] -> Int
 partTwo xs = head [x*y*z | x <- xs, y <- xs, z <- xs, x+y+z == 2020]
 
 main = do
-    let file = "day1.data"
+    let file = "data/day1.data"
     contents <- readFile file
     let expenses = map readInt (words contents)
     print (partOne expenses)
